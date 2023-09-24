@@ -1,0 +1,16 @@
+import Link from 'next/link'
+import { Links } from '../coponents/links'
+
+export default function DashboardLayout({
+  children, // will be a page or nested layout
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <section>
+      <nav></nav>
+
+      {children}
+    </section>
+  )
+}
