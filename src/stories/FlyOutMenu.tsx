@@ -1,7 +1,7 @@
 // components/FlyOutMenu.tsx
 import React, { useState } from 'react'
 import './FlyOutMenu.css' // You can create the CSS file for styling
-import { Links } from '@/app/coponents/links'
+import { Links } from '../app/coponents/links'
 
 export interface FlyOutMenuProps {
   isOpen: boolean
@@ -15,21 +15,23 @@ const FlyOutMenu: React.FC<FlyOutMenuProps> = ({ isOpen, onClose, onOpen }) => {
   }
 
   return (
-    <div>
+    <div
+      className={`fly-out-menu ${isOpen ? 'open' : 'closed'}`}
+      style={menuStyle}
+    >
       {isOpen ? (
-        <div
-          className={`fly-out-menu ${isOpen ? 'open' : ''}`}
-          style={menuStyle}
-        >
+        <div>
           <button onClick={onClose} className="close-button">
             Close
           </button>
           <Links />
         </div>
       ) : (
-        <button onClick={onOpen} className="close-button">
-          Open
-        </button>
+        <div>
+          <button onClick={onOpen} className="open-button">
+            Open
+          </button>
+        </div>
       )}
     </div>
   )
