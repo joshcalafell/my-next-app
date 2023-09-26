@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import './FlyOutMenu.css' // You can create the CSS file for styling
 import { Links } from '../app/coponents/links'
-import { Button } from './Button'
+import { Button } from '../stories/Atoms/Buttons/Button'
 
 export interface FlyOutMenuProps {
   isOpen: boolean
@@ -16,11 +16,15 @@ const FlyOutMenu: React.FC<FlyOutMenuProps> = ({ isOpen, onClose, onOpen }) => {
       {isOpen ? (
         <div className="menu-title">
           <h2>Menu</h2>
-          <Button primary={false} size="medium" label="X" onClick={onClose} />
+          <Button
+            primary={false}
+            size="medium"
+            label="Close"
+            onClick={onClose}
+          />
         </div>
       ) : (
         <div className="menu-title">
-          <h2>Menu</h2>
           <Button primary={false} size="medium" label="Open" onClick={onOpen} />
         </div>
       )}
