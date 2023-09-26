@@ -1,5 +1,5 @@
 // Button.stories.ts|tsx
-
+import React from 'react'
 // Replace your-framework with the name of your framework
 import type { Meta, StoryObj } from '@storybook/react'
 
@@ -14,16 +14,6 @@ type Story = StoryObj<typeof RightArrow>
 
 export const Primary: Story = {
   args: {
-    primary: true,
-
-    backgroundColor: '#aa99ff',
-  },
-}
-
-export const Secondary: Story = {
-  args: {
-    primary: false,
-
-    backgroundColor: '#ff0099',
+    arrowClick: () => {},
   },
 }

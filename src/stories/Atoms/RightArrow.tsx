@@ -1,29 +1,19 @@
+import React from 'react'
+
 export interface RightArrowProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean
-  /**
-   * What background color to use
-   */
   backgroundColor?: string
 
   /**
    * Optional click handler
    */
-  onClick?: () => void
+  arrowClick?: () => void
 }
-
 /**
  * Primary UI component for user interaction
  */
-
-export const RightArrow = ({
-  primary = false,
-  backgroundColor = '#333333',
-}: RightArrowProps) => {
+export const RightArrow = ({ arrowClick }: RightArrowProps) => {
   return (
-    <button type="button" className={`'arrow'`}>
+    <button type="button" className="arrow" onClick={arrowClick}>
       <svg
         viewBox="0 0 14 14"
         width="8px"
@@ -41,5 +31,3 @@ export const RightArrow = ({
     </button>
   )
 }
-
-export default RightArrow

@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.fly-out-menu {
+  animation: both;
+  transition-duration: 1s;
+  border: solid 1px #333;
+}
+
+.fly-out-menu.closed {
+  width: 10%;
+}
+
+.fly-out-menu.open {
+  min-width: 300px;
+  width: 30%;
+}
+
+.menu-title {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px;
+  padding-left: 16px;
+}
