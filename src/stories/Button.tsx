@@ -6,6 +6,8 @@ interface ButtonProps {
    * Is this the principal call to action on the page?
    */
   primary?: boolean
+
+  color?: string
   /**
    * What background color to use
    */
@@ -28,8 +30,8 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = 'medium',
+  primary,
+  size,
   backgroundColor,
   label,
   ...props
@@ -40,18 +42,14 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
-      )}
+      className={[
+        'storybook-button',
+        `${mode}`,
+        `storybook-button--${size}`,
+      ].join(' ')}
       {...props}
     >
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-          margin: 16px;
-        }
-      `}</style>
     </button>
   )
 }

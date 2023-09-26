@@ -7,6 +7,9 @@ import { Button } from './Button'
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  parameters: {
+    layout: 'centered',
+  },
 }
 
 export default meta
@@ -16,17 +19,14 @@ export const Primary: Story = {
   args: {
     primary: true,
     label: 'Button',
-    size: 'large',
-    backgroundColor: '#aa99ff',
+    size: 'medium',
   },
 }
 
 export const Secondary: Story = {
   args: {
-    ...Primary.args,
     primary: false,
     label: 'Button',
-    size: 'large',
-    backgroundColor: '#ff0099',
+    size: 'medium',
   },
 }
