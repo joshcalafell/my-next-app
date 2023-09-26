@@ -25,6 +25,7 @@ const FlyOutMenu: React.FC<FlyOutMenuProps> = ({ isOpen, onClose, onOpen }) => {
         </div>
       ) : (
         <div className="menu-title">
+          <h1></h1>
           <Button primary={false} size="medium" label="Open" onClick={onOpen} />
         </div>
       )}
