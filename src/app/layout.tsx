@@ -27,14 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col min-h-screen">
-          {children}{' '}
-          <FlyOutMenu
-            isOpen={isOpen}
-            onClose={handleClose}
-            onOpen={handleOpen}
-          />
-        </div>
+        <div className="flex flex-col min-h-screen">{children} </div>
       </body>
     </html>
   )
